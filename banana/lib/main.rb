@@ -5,6 +5,12 @@
 
 class Beginning
 
+  attr_reader :beginning
+  
+  def initialize(beginning)
+    @beginning = beginning
+  end
+
   def split
     beginning.split.size
   end
@@ -13,7 +19,7 @@ end
 
 class Middle
 
-  def split
+  def to_s
     middle.split.size
   end
 
@@ -21,7 +27,7 @@ end
 
 class Conclusion
 
-  def split
+  def to_s
     conclusion.split.size
   end
 
@@ -29,7 +35,8 @@ end
 
 
 def word_count(beginning, middle, conclusion)
-  beginning.split.size +
+  beginning1 = Beginning.new(beginning)
+  beginning1.split +
   middle.split.size +
   conclusion.split.size
 end
