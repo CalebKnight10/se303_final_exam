@@ -3,12 +3,10 @@
 # Hint: Let the existing functions use the new code that you
 #       write.
 
-class SentenceStruct
+class Beginning
 
   def split
-    beginning.split.size +
-    middle.split.size +
-    conclusion.split.size
+    beginning.split.size
   end
 
 end
