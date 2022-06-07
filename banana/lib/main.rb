@@ -11,6 +11,22 @@ class Beginning
 
 end
 
+class Middle
+
+  def split
+    middle.split.size
+  end
+
+end
+
+class Conclusion
+
+  def split
+    conclusion.split.size
+  end
+
+end
+
 
 def word_count(beginning, middle, conclusion)
   beginning.split.size +
