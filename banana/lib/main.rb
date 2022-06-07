@@ -34,7 +34,13 @@ end
 
 class Conclusion
 
-  def to_s
+  attr_reader :conclusion
+
+  def initialize(conclusion)
+    @conclusion = conclusion
+  end
+
+  def split
     conclusion.split.size
   end
 
@@ -44,9 +50,10 @@ end
 def word_count(beginning, middle, conclusion)
   beginning = Beginning.new(beginning)
   middle = Middle.new(middle)
+  conclusion = Conclusion.new(conclusion)
   beginning.split +
   middle.split +
-  conclusion.split.size
+  conclusion.split
 end
 
 def letter_count(beginning, middle, conclusion)
