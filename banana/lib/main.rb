@@ -12,8 +12,12 @@ class Beginning
   end
 
   def split
-    beginning.split.size
+    beginning.split.size 
   end
+
+  def periods
+    beginning.scan(/\./).size
+  end  
 
 end
 
@@ -30,6 +34,10 @@ class Middle
     middle.split.size
   end
 
+  def periods
+    middle.scan(/\./).size
+  end  
+
 end
 
 class Conclusion
@@ -42,6 +50,10 @@ class Conclusion
 
   def split
     conclusion.split.size
+  end
+
+  def periods
+    conclusion.scan(/\./).size
   end
 
 end
@@ -61,7 +73,10 @@ def letter_count(beginning, middle, conclusion)
 end
 
 def period_count(beginning, middle, conclusion)
-  beginning.scan(/\./).size +
-  middle.scan(/\./).size +
-  conclusion.scan(/\./).size
+  beginning = Beginning.new(beginning)
+  middle = Middle.new(middle)
+  conclusion = Conclusion.new(conclusion)
+  beginning.periods +
+  middle.periods +
+  conclusion.periods 
 end
