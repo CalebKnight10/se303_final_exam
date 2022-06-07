@@ -3,6 +3,17 @@
 # Hint: Let the existing functions use the new code that you
 #       write.
 
+class SentenceStruct
+
+  def split
+    beginning.split.size +
+    middle.split.size +
+    conclusion.split.size
+  end
+
+end
+
+
 def word_count(beginning, middle, conclusion)
   beginning.split.size +
   middle.split.size +
