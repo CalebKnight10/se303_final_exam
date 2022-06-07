@@ -15,10 +15,14 @@ def midPart
   middle << "\n"
 end
 
+def lastPart
+  "And that was it."
+end
+
 def story
   first = firstPart
   middle = midPart
-  conclusion = "And that was it."
+  conclusion = lastPart
   first + middle + conclusion
 end
 
